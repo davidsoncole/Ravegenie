@@ -77,7 +77,42 @@
       <section class="dark">
         <v-container>
           <v-row>
-            <v-col cols="12" md="6" lg="6"></v-col>
+            <v-col cols="12" md="6" lg="6" class="panels">
+              <h3>Frequently Asked Questions (FAQs)</h3>
+              <br>
+              <v-expansion-panels focusable accordion v-model="panel" multiple>
+                <v-expansion-panel>
+                  <v-expansion-panel-header>Publisher FAQs</v-expansion-panel-header>
+                  <v-expansion-panel-content>
+                    <br>
+                    <p>I just signed up what next?</p>
+                    <p>What social packs can I subscribe to?</p>
+                    <p>How will I receive my publisher payment and how long will it take?</p>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-expansion-panel>
+                  <v-expansion-panel-header>Promoter FAQs</v-expansion-panel-header>
+                  <v-expansion-panel-content>
+                    <br>
+                    <p>I just signed up what next?</p>
+                    <p>How will I receive my promoter payment and how long will it take?</p>
+                    <p>After my 5th generation will I keep earning on referrals?</p>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+
+                <v-expansion-panel>
+                  <v-expansion-panel-header>Advertisers FAQs</v-expansion-panel-header>
+                  <v-expansion-panel-content>
+                    <br>
+                    <p>I just placed an ad what next?</p>
+                    <p>What's the difference between an exclusive advertiser and a regular advertiser?</p>
+                    <p>How long will my ads last?</p>
+                    <p>What kind of ads can I place on Rave Genie?</p>
+                  </v-expansion-panel-content>
+                </v-expansion-panel>
+              </v-expansion-panels>
+            </v-col>
             <v-col cols="12" md="6" lg="6">
               <h3>What we are known for</h3>
               <br>
@@ -85,6 +120,7 @@
                 All you need to do is get started with us, select a social pack that suits your needs, pay and get down to your business.</p>
               <p>Increase Conversion - The chances of increased conversion are higher when your ads are constantly being shared.</p>
               <p>Product Analysis - Analyze your performance rate and determine how to do better with our track and - report (TAR) tool.</p>
+              <p>Didn't find answers to a question that you have, send your questions to <a href="#">enquiries@ravegenie.com</a></p>
             </v-col>
           </v-row>
         </v-container>
@@ -143,7 +179,16 @@ import Footerbar from '../components/Footerbar'
 export default {
   components: { 
     Navbar,
-    Footerbar },
+    Footerbar 
+
+    },
+
+    data() {
+        return {
+          panel: [0],
+
+        }
+    }
   
 };
 </script>
@@ -174,6 +219,10 @@ section {
 
 .about_title {
   margin-top: 5vh;
+}
+
+.panels {
+  padding-right: 5vw;
 }
 
 .pins {

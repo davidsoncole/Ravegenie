@@ -13,7 +13,7 @@
         <div>
             <v-row>
                 <v-col cols="12" md="3" lg="3"></v-col>
-                <v-col cols="12" md="6" lg="6" class="text-center">
+                <v-col cols="12" md="6" lg="6" class="text-center footer_text">
                     <p class="caption">Lacus aenean turpis diam nulla nunc lacus. Morbi arcu sed suscipit nec, tortor sem massa dui dui vitae magna consectetuer massa mauris egestas, lectus vulputate scelerisque, tortor et dui fermentum, commodo molestie sed wisi viverra sociosqu.</p>
                     <v-btn
                         v-for="icon in icons"
@@ -51,6 +51,13 @@
 </script>
 
 <style scoped>
+
+@media only screen and (max-width: 959px) {
+  .footer_text {
+    padding-left: 5vh;
+    padding-right: 5vh;
+  }
+}
 
 .foot {
     margin-top: 30vh;
