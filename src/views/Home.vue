@@ -1,22 +1,25 @@
 <template>
   <div class="about">
     <!--<v-container fluid></v-container>-->
-      <Navbar />
+      
 
-      <header class="header_container">
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="6" lg="6">
-              <h1>GIVE YOUR BRAND - BUSINESS - EVENTS AND PERSONALITY AN INCREDIBLE REACH.</h1>
-              <br>
-              <p>Become a Rave Genie influencer. Help brands reach a very wide online media market by sharing viraland Targeted Ads on social media and get paid.</p>
-              
-              <br>
-              <v-btn dark >Get started</v-btn>
-            </v-col>
-            <v-col cols="12" md="6" lg="6"></v-col>
-          </v-row>
-        </v-container>
+      <header>
+        <div class="overlay">
+          <Navbar />
+          <v-container class="header_container">
+            <v-row>
+              <v-col cols="12" md="6" lg="6" class="white--text">
+                <h1>GIVE YOUR BRAND - BUSINESS - EVENTS AND PERSONALITY AN INCREDIBLE REACH.</h1>
+                <br>
+                <p>Become a Rave Genie influencer. Help brands reach a very wide online media market by sharing viraland Targeted Ads on social media and get paid.</p>
+                
+                <br>
+                <v-btn light color="orange">Get started</v-btn>
+              </v-col>
+              <v-col cols="12" md="6" lg="6"></v-col>
+            </v-row>
+          </v-container>
+        </div>
       </header>
 
       <section class="about">
@@ -39,7 +42,9 @@
       <section>
         <v-container>
           <v-row>
-            <v-col cols="12" md="6" lg="6"></v-col>
+            <v-col cols="12" md="6" lg="6" class="connected">
+              <div class="connect"></div>
+            </v-col>
             <v-col cols="12" md="6" lg="6">
               <h3>...Check out our connects</h3>
               <br>
@@ -53,7 +58,7 @@
         </v-container>
       </section>
 
-      <section>
+      <section class="dark">
         <v-container>
           <v-row>
             <v-col cols="12" md="6" lg="6">
@@ -69,18 +74,20 @@
               <p>Rave Genie provides you some of the easiest ways to make money online. Tell your friends about our growing community and earn 
                 some extra money weekly when they subscribe. Passive income at its best, yeah?</p>
             </v-col>
-            <v-col cols="12" md="6" lg="6"></v-col>
+            <v-col cols="12" md="6" lg="6" class="connected">
+              <div class="post"></div>
+            </v-col>
           </v-row>
         </v-container>
       </section>
 
-      <section class="dark">
+      <section>
         <v-container>
           <v-row>
             <v-col cols="12" md="6" lg="6" class="panels">
               <h3>Frequently Asked Questions (FAQs)</h3>
               <br>
-              <v-expansion-panels focusable accordion v-model="panel" multiple>
+              <v-expansion-panels flat focusable accordion v-model="panel" multiple>
                 <v-expansion-panel>
                   <v-expansion-panel-header>Publisher FAQs</v-expansion-panel-header>
                   <v-expansion-panel-content>
@@ -126,23 +133,27 @@
         </v-container>
       </section> 
 
-      <section>
+      <section class="dark">
         <v-container class="text-center">
           <h3>We know what makes you happy</h3>
           <v-row>
             <v-col cols="12" md="3" lg="3" class="pins">
-              <h4>CustomerCareSupport</h4>
+              <img class="offer_img" src="../assets/img/customer-care.png" alt="">
+              <h4>Customer Care Support</h4>
               <p>you're never alone. Our team of social experts are readily available to assist you in the best way possible. Were solve your queries in quick-time.</p>
             </v-col>
             <v-col cols="12" md="3" lg="3" class="pins">
+              <img class="offer_img" src="../assets/img/marketing.png" alt="">
               <h4>Track and Report (TAR)</h4>
               <p>we employ modern technology to track how well your ads are doing and give you real-time reports. You'll get suggestions on how to get your ads to do even better.</p>
             </v-col>
             <v-col cols="12" md="3" lg="3" class="pins">
+              <img class="offer_img" src="../assets/img/card.png" alt="">
               <h4>Effective Payment Options</h4>
               <p>get paid to your local bank account. Payment settlements are instant and take no more than 24hours.</p>
             </v-col>
             <v-col cols="12" md="3" lg="3" class="pins">
+              <img class="offer_img" src="../assets/img/breakfast.png" alt="">
               <h4>The Juicy Stuff</h4>
               <p>enjoy extra perks, bonuses and price reductions when you signup with us. We have something for everyone and a little more.</p>
             </v-col>
@@ -202,12 +213,51 @@ export default {
   }
 }
 
+header {
+  background-image: url('../assets/img/header_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
 .header_container {
   padding: 20vh 0;
 }
 
 section {
   padding: 10vh 0;
+}
+
+.connected {
+  padding: 0vh 5vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.connect {
+  background-image: url('../assets/img/connects.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  height: 100%;
+}
+
+.post {
+  background-image: url('../assets/img/posting.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  height: 100%;
 }
 
 .line {
@@ -223,10 +273,20 @@ section {
 
 .panels {
   padding-right: 5vw;
+  padding-bottom: 5vh;
 }
 
 .pins {
   margin: 5vh 0;
+}
+
+.dark {
+  background-color: rgba(29, 172, 214, .1);
+}
+
+.offer_img {
+  margin: 2vh 0;
+  width: 100px;
 }
 
 </style>

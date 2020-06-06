@@ -7,7 +7,7 @@
       <v-card
         flat
         tile
-        class="text-center"
+        class="text-center dark"
         width="100%"
       >
         <div>
@@ -65,6 +65,11 @@
 
 .social_icon {
   padding: 0 !important;
+}
+
+.dark {
+  background-color: rgba(29, 172, 214, .1) !important;
+  padding-top: 5vh;
 }
 
 </style>

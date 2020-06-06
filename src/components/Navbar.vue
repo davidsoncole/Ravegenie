@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar flat>
+    <v-toolbar flat dark color="transparent">
       <v-toolbar-title>
           <h5>LOGO</h5>
       </v-toolbar-title>
@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="d-none d-sm-flex">
-        <v-btn v-for="link in links" :key="link.text"  text>{{ link.text}}</v-btn>
+        <v-btn v-for="link in links" :key="link.text" route :to="link.route"  text>{{ link.text}}</v-btn>
       </v-toolbar-items>
 
       <v-toolbar-items class="d-sm-none">
@@ -65,7 +65,7 @@ export default {
               {text: 'About', route: '#about'},
               {text: 'Services', route: '#services'},
               {text: 'Contact', route: '#contact'},
-              {text: 'Signup', route: '/Signup'}
+              {text: 'Login', route: '/Login'}
           ]
         }
     }
