@@ -9,6 +9,13 @@
                         <v-toolbar elevation="0">
                           <v-card-title class="subtitle-1 font-weight-medium">My Campaign</v-card-title>
                         </v-toolbar>
+                        <v-card-subtitle>
+                            <v-breadcrumbs :items="items">
+                              <template v-slot:divider>
+                                <v-icon>mdi-chevron-right</v-icon>
+                              </template>
+                            </v-breadcrumbs>
+                          </v-card-subtitle>
                         <v-card-text>
                             <v-simple-table>
                                 <template v-slot:default>
@@ -17,7 +24,7 @@
                                     <th class="text-left">Name</th>
                                     <th class="text-left">Calories</th>
                                     <th class="text-left">Name</th>
-                                    <th class="text-left">Name</th>
+                                    <th class="text-left"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -25,7 +32,7 @@
                                     <td>{{ item.name }}</td>
                                     <td>{{ item.calories }}</td>
                                     <td>{{ item.name }}</td>
-                                    <td>{{ item.name }}</td>
+                                    <td class="text-right"><v-btn route to="/publisher/details" text>View</v-btn></td>
                                     </tr>
                                 </tbody>
                                 </template>
@@ -56,6 +63,20 @@
             calories: 262,
           },
         ],
+
+        items: [
+          {
+            text: 'Campaign',
+            disabled: false,
+            to: 'user_campaign',
+          },
+          {
+            text: 'My campaign',
+            disabled: false,
+            to: 'my_campaign',
+          },
+        ],
+
       }
     },
   }

@@ -6,10 +6,10 @@
                   <v-card
                     class="mx-auto"
                     >
-                        <v-toolbar elevation="0">
+                        <v-toolbar elevation="0" dark color="cyan">
                           <v-card-title class="subtitle-1 font-weight-medium">Campaign Lists</v-card-title>
                           <v-spacer></v-spacer>
-                          <v-btn route to="/my_campaign" text>
+                          <v-btn route to="/publisher/my_campaign" text>
                             view campaign
                           </v-btn>
                         </v-toolbar>
@@ -20,16 +20,16 @@
                                     <tr>
                                     <th class="text-left">Name</th>
                                     <th class="text-left">Calories</th>
-                                    <th class="text-left">Name</th>
-                                    <th class="text-left">Name</th>
+                                    <th></th>
+                                    <th class="text-left"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-for="item in desserts" :key="item.name">
                                     <td>{{ item.name }}</td>
                                     <td>{{ item.calories }}</td>
-                                    <td>{{ item.name }}</td>
-                                    <td>{{ item.name }}</td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"><v-btn text>view</v-btn> <v-btn text>share</v-btn></td>
                                     </tr>
                                 </tbody>
                                 </template>

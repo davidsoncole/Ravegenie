@@ -10,7 +10,7 @@
       </v-btn>
     </v-toolbar>
 
-    <v-navigation-drawer permanent app>
+    <v-navigation-drawer permanent app dark>
       <v-list-item>
           <v-list-item-content>
           <v-list-item-title class="title">
@@ -30,6 +30,7 @@
           :key="item.title"
           router :to="item.route"
           link
+          color="orange"
           >
           <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>

@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
+import Signup from './views/Signup.vue'
+import Mail_verification from './views/Mail_verification.vue'
+import Verify_mail from './views/Verify_mail.vue'
 import Logout from './views/Logout.vue'
 
 import Business_app from './views/Business_app.vue'
@@ -11,7 +14,7 @@ import Promotions from './views/business/Promotions.vue'
 import Settings from './views/business/Settings.vue'
 import Transactions from './views/business/Transactions.vue'
 
-import User_app from './views/User_app.vue'
+import Publisher from './views/Publisher.vue'
 import User_dashboard from './views/user/User_dashboard.vue'
 import Details from './views/user/Details.vue'
 import My_campaign from './views/user/My_campaign.vue'
@@ -20,6 +23,7 @@ import User_tasks from './views/user/User_tasks.vue'
 import My_tasks from './views/user/My_tasks.vue'
 import User_settings from './views/user/User_settings.vue'
 import User_transactions from './views/user/User_transactions.vue'
+import { Verify } from 'crypto';
 
 Vue.use(Router)
 
@@ -36,6 +40,21 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: Signup
+    },
+    {
+      path: '/mail_verification',
+      name: 'mail_verification',
+      component: Mail_verification
+    },
+    {
+      path: '/verify_mail',
+      name: 'verify_mail',
+      component: Verify_mail
     },
     {
       path: '/logout',
@@ -59,9 +78,9 @@ export default new Router({
       ],
     },
     {
-      path: '/user_app',
-      name: 'user_app',
-      component: User_app,
+      path: '/publisher',
+      name: 'publisher',
+      component: Publisher,
       // route level code-splitting
       // this generates a separate chunk (dashboard.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

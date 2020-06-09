@@ -6,7 +6,7 @@
                   <v-card
                     class="mx-auto"
                     >
-                        <v-toolbar elevation="0">
+                        <v-toolbar elevation="0" dark color="cyan">
                           <v-card-title class="subtitle-1 font-weight-medium">Transactions</v-card-title>
                         </v-toolbar>
                         <v-card-text>
@@ -14,9 +14,11 @@
                             <v-col cols="12" md="3" lg="3">
                               <v-card
                               class="mx-auto"
+                              dark
+                              color="#004383"
                               >
                                   <v-card-text>
-                                  <p class="display-1 font-weight-bold">
+                                  <p class="display-1 font-weight-bold white--text">
                                       $ 4000
                                   </p>
                                   <span>Main Balance</span>
@@ -28,16 +30,18 @@
                             <v-col cols="12" md="3" lg="3">
                               <v-card
                               class="mx-auto"
+                              dark
+                              color="#004383"
                               >
                                   <v-card-text>
-                                  <p class="display-1 font-weight-bold">
+                                  <p class="display-1 font-weight-bold white--text">
                                       $ 400
                                   </p>
                                   <span>Bonus Balance</span>
                                   </v-card-text>
                                   <v-card-actions>
                                       <v-spacer></v-spacer>
-                                      <v-btn small depressed>Redeem</v-btn>
+                                      <v-btn small depressed dark color="cyan">Redeem</v-btn>
                                   </v-card-actions>
                               </v-card>
                             </v-col>

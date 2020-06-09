@@ -8,9 +8,11 @@
               <v-col cols="12" md="4" lg="4">
                 <v-card
                 class="mx-auto"
+                dark
+                color="#b17cc6"
                 >
                     <v-card-text>
-                    <p class="display-1 font-weight-bold">
+                    <p class="display-1 font-weight-bold white--text">
                         20
                     </p>
                     </v-card-text>
@@ -21,32 +23,36 @@
                 </v-card>
               </v-col>
               <v-col cols="12" md="4" lg="4">
-                  <v-card
-                class="mx-auto"
-                >
-                    <v-card-text>
-                    <p class="display-1 font-weight-bold">
-                        20
-                    </p>
-                    </v-card-text>
-                    <v-card-actions>
-                        <v-spacer></v-spacer>
-                        <p class="body-2">Total Campaign</p>
-                    </v-card-actions>
-                </v-card>
+                    <v-card
+                    class="mx-auto"
+                    dark
+                    color="#ff8657"
+                    >
+                        <v-card-text>
+                        <p class="display-1 font-weight-bold white--text">
+                            20
+                        </p>
+                        </v-card-text>
+                        <v-card-actions>
+                            <v-spacer></v-spacer>
+                            <p class="body-2 font-weight-medium">Total Campaign</p>
+                        </v-card-actions>
+                    </v-card>
               </v-col>
               <v-col cols="12" md="4" lg="4">
                   <v-card
                     class="mx-auto"
+                    dark
+                    color="#63b0e3"
                     >
                         <v-card-text>
-                        <p class="display-1 font-weight-bold">
+                        <p class="display-1 font-weight-bold white--text">
                             $4000
                         </p>
                         </v-card-text>
                         <v-card-actions>
                             <v-spacer></v-spacer>
-                            <p class="body-2">Main Balance</p>
+                            <p class="body-2 font-weight-medium">Main Balance</p>
                         </v-card-actions>
                     </v-card>
               </v-col>
@@ -54,7 +60,9 @@
                     <v-card
                     class="mx-auto"
                     >
+                        <v-toolbar elevation="0" dark color="cyan">
                         <v-card-title class="subtitle-1 font-weight-medium">Current Subscription</v-card-title>
+                        </v-toolbar>
                         <v-card-text>
                         </v-card-text>
                     </v-card>
@@ -63,7 +71,9 @@
                   <v-card
                 class="mx-auto"
                 >
+                    <v-toolbar elevation="0" dark color="cyan">
                     <v-card-title class="subtitle-1 font-weight-medium">Campaign Lists</v-card-title>
+                    </v-toolbar>
                     <v-card-text>
                         <v-simple-table>
                             <template v-slot:default>
@@ -90,7 +100,9 @@
                   <v-card
                     class="mx-auto"
                     >
+                        <v-toolbar elevation="0" dark color="cyan">
                         <v-card-title class="subtitle-1 font-weight-medium">Running Promotions</v-card-title>
+                        </v-toolbar>
                         <v-card-text>
                             <v-simple-table>
                                 <template v-slot:default>
@@ -115,7 +127,9 @@
                   <v-card
                     class="mx-auto"
                     >
+                        <v-toolbar elevation="0" dark color="cyan">
                         <v-card-title class="subtitle-1 font-weight-medium">Transaction History</v-card-title>
+                        </v-toolbar>
                         <v-card-text>
                             <v-simple-table>
                                 <template v-slot:default>

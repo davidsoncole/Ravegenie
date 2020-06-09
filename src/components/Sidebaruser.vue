@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard">
+  <div>
     <v-toolbar dense elevation="0">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -10,7 +10,7 @@
       </v-btn>
     </v-toolbar>
 
-    <v-navigation-drawer permanent app>
+    <v-navigation-drawer permanent app dark>
       <v-list-item>
           <v-list-item-content>
           <v-list-item-title class="title">
@@ -30,6 +30,7 @@
           :key="item.title"
           router :to="item.route"
           link
+          color="orange"
           >
           <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
@@ -48,11 +49,11 @@
   export default {
     data: () => ({
         items: [
-          { title: 'Dashboard', route: '/user_app/user_dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Transactions', route: '/user_app/user_transactions', icon: 'mdi-cash-multiple' },
-          { title: 'Campaign', route: '/user_app/user_campaign', icon: 'mdi-elevation-rise' },
-          { title: 'Tasks', route: '/user_app/user_tasks', icon: 'mdi-file-image' },
-          { title: 'Settings', route: '/user_app/user_settings', icon: 'mdi-brightness-7' },
+          { title: 'Dashboard', route: '/publisher/user_dashboard', icon: 'mdi-view-dashboard' },
+          { title: 'Transactions', route: '/publisher/user_transactions', icon: 'mdi-cash-multiple' },
+          { title: 'Campaign', route: '/publisher/user_campaign', icon: 'mdi-elevation-rise' },
+          { title: 'Tasks', route: '/publisher/user_tasks', icon: 'mdi-file-image' },
+          { title: 'Settings', route: '/publisher/user_settings', icon: 'mdi-brightness-7' },
           { title: 'Logout', route: '/Logout', icon: 'mdi-close-box' },
         ],
     }),
