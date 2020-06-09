@@ -5,7 +5,6 @@ import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false
 
-axios.defaults.baseURL= '/';
 
 new Vue({
   router,
